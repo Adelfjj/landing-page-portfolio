@@ -14,8 +14,8 @@ header{
     top: 0;
     width: 100vw;
     display: block;
-    margin: 20px auto 0;
-    background-color: aliceblue;
+    padding: 20px 0 0;
+    background-color: white;
 }
 nav{
     display: flex;
@@ -42,6 +42,7 @@ nav ul li a, nav p{
     display: block;
     padding: 10px;
     font-size: 15px;
+    color: black;
 }
 nav ul li a:hover{
     color: rgb(57, 84, 235);
@@ -51,61 +52,64 @@ main{
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    margin: 50px auto 0;
+    margin: 0 auto;
     overflow:hidden;
 }
-main section.sobre{
-    height: calc(100vh - 150px); 
-    margin-top: 100px;
+main section#sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    padding-bottom: 50px;
     margin-left: 5px;
 }
 
-main section.sobre .container{
+main section#sobre .container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     gap: 80px;
 }
-main section.sobre .container img{
+main section#sobre .container img{
     border-radius: 50%;
 }
-main section.sobre .container ul{
+main section#sobre .container ul{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-main section.sobre .container ul li{
+main section#sobre .container ul li{
     height: 100%;
     width: 100%;
 }
-main section.sobre .container ul li a{
+main section#sobre .container ul li a{
     display: block;
     padding: 10px;
     font-size: 30px;
     color: rgb(57, 84, 235);
 }
-main section.sobre .container>div{
+main section#sobre .container>div{
     max-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-main section.sobre .container>div h1{
+main section#sobre .container>div h1{
     font-size: 30px;
     font-weight:600;
 }
-main section.sobre .container>div h2{
+main section#sobre .container>div h2{
     font-size: 16px;
     font-weight:400;
     color: rgb(70, 70, 70);
 }
-main section.sobre .container>div p{
+main section#sobre .container>div p{
     font-size: 13px;
     width: 230px;
     color: rgb(83, 83, 83);
 }
-main section.sobre .container>div button{
+main section#sobre .container>div button{
     align-self: start;
     margin-top: 15px;
     padding: 10px 10px;
@@ -115,44 +119,114 @@ main section.sobre .container>div button{
     border-radius: 5px;
     cursor: pointer;
 }
-main section.sobre .container>div button i{
+main section#sobre .container>div button i{
     margin-left: 3px;
 }
 /*Portfolio*/
 main section#portfolio{
-    height: calc(100vh - 50px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 main section#portfolio h1{
     font-size: 30px;
     margin: 25px 0 60px;
 }
-main section#portfolio .carousel .model{
-    display: flex;
-    flex-direction: row;
+main section#portfolio .carousel{
+    width: 100%;
+    position: relative;
 }
-
-
+main section#portfolio .carousel .model{
+    display: none;
+    flex-direction: row;
+    margin: 0 80px 30px;
+    gap: 30px;
+}
+main section#portfolio .carousel .model .info{
+    display: flex;
+    flex-direction: column;
+}
+main section#portfolio .carousel .model .info button{
+    align-self: start;
+    margin-top: 15px;
+    padding: 10px 10px;
+    color: aliceblue;
+    background-color: rgb(57, 84, 235);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+main section#portfolio .carousel .prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(57, 84, 235);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0,6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(57, 84, 235,0.8);
+    color: white !important;
+}
+.dot{
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: rgba(57, 84, 235,0.6);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+    background-color: rgba(57, 84, 235);
+}
+.fade{
+    animation-name:fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
 /*Responsivo*/
 @media only screen and (max-width: 768px) {
     nav ul{
         display: none;
     }
-    main section.sobre .container{
+    main section#sobre .container{
         align-items: center;
         justify-content: center;
         gap:5px;
     }
-    main section.sobre .container ul{
+    main section#sobre .container ul{
         order: 3;
     }
-    main section.sobre .container>div{
+    main section#sobre .container>div{
         order: 2;
     }
-    main section.sobre .container img{
+    main section#sobre .container img{
         order: 1;
         margin-bottom: 40px;
+    }
+    main section#portfolio .carousel .model{
+        flex-direction: column;
+        text-align: center;
+    }
+    main section#portfolio .carousel .model .info button{
+        align-self: center;
     }
 }

@@ -1,7 +1,19 @@
 let slideIndex = 1;
 showSlides(slideIndex);
-navMenuItem = document.getElementsByTagName("nav").getElementsByTagName("ul").getElementsByTagName("li");
-console.log(navMenuItem.length);
+
+let sections = document.querySelectorAll("section");
+let links = document.querySelectorAll("nav ul li a");
+
+function activeMenu(){
+  var len = sections.length;
+   do{
+    links.forEach(lks => lks.classList.remove("active"));
+    links[len-1].classList.add("active");
+  }while(--len && window.scrollY - 97 < sections[len-1].offsetTop)
+}
+
+window.addEventListener("scroll", () => activeMenu());
+
 // proximo/anterior
 function plusSlides(n) {
   showSlides(slideIndex += n);

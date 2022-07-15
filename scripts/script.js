@@ -3,6 +3,11 @@ showSlides(slideIndex);
 
 let sections = document.querySelectorAll("section");
 let links = document.querySelectorAll("nav ul li a");
+let btnLanding = document.querySelector("#portfolio button#ldp");
+
+btnLanding.addEventListener("click", () =>{
+  window.location.href = "landing-page.html";
+});
 
 function activeMenu(){
   var len = sections.length;

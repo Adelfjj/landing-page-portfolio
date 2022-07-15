@@ -33,7 +33,7 @@ nav{
     margin: 0 auto;
     justify-content: space-between;
 }
-nav > p img{
+nav p img{
     width: 70px;
 }
 nav ul{
@@ -156,6 +156,9 @@ main section#portfolio .carousel .model{
     flex-direction: row;
     margin: 0 80px 30px;
     gap: 30px;
+}
+main section#portfolio .carousel .model img{
+    width: 300px;
 }
 main section#portfolio .carousel .model .info{
     display: flex;

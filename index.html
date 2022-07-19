@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav>
-            <p><img src="img/2-removebg-preview.png" alt="" srcset=""></p>
+            <p><img src="img/logo.png" alt="" srcset=""></p>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -39,38 +39,11 @@
         <section id="portfolio">
             <h1>Portfolio</h1>
             <div class="carousel">
-                <div class="model fade">
-                    <img src="https://fakeimg.pl/300x200/" alt="">
-                    <div class="info">
-                        <h2>Html-css</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat pellentesque felis at consectetur. Nullam tristique, sapien id accumsan auctor, nisi justo cursus turpis, eu feugiat risus metus in magna.</p>
-                        <button>Ver + </button>
-                    </div>
-                </div>
-                <div class="model fade">
-                    <label for="ldp"><img src="img/active.png" alt=""></label>
-                    <div class="info">
-                        <h2>Landing Page</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat pellentesque felis at consectetur. Nullam tristique, sapien id accumsan auctor, nisi justo cursus turpis, eu feugiat risus metus in magna.</p>
-                        <button id="ldp">Ver + </button>
-                    </div>
-                </div>
-                <div class="model fade card">
-                    <img src="https://fakeimg.pl/300x200/" alt="">
-                    <div class="info">
-                        <h2>Calculadora</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat pellentesque felis at consectetur. Nullam tristique, sapien id accumsan auctor, nisi justo cursus turpis, eu feugiat risus metus in magna.</p>
-                        <button>Ver + </button>
-                    </div>
-                </div>
                 <!-- proximo e anterior -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" >&#10094;</a>
+                <a class="next">&#10095;</a>
             </div>
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="dots">
             </div>
         </section>
         <section id="contato">
@@ -114,6 +87,7 @@
             </div>
         </section>
     </main>
-    <script src="scripts/script.js"></script>
+    <script type="module" src="scripts/script.js"></script>
+   <!-- <script type="module" src="scripts/module.js"></script> --> 
 </body>
 </html>

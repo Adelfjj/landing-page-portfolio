@@ -11,17 +11,12 @@ let slideIndex = 1;
 window.onload = () =>{ 
   loadItemCarrocel(items);
   createDots(items);
-  showSlides(slideIndex); // fora do window.onload a função carrega mais rapido que a função que gera os itens do carousel 
+  showSlides(slideIndex);
   openPage(items);
 }
 window.addEventListener("scroll", () => activeMenu());
 prev.addEventListener("click", () => plusSlides(-1));
 next.addEventListener("click", () => plusSlides(1));
-//let btnLanding = document.querySelector("#portfolio button#ldp");
-
-/*btnLanding.addEventListener("click", () =>{
-  window.location.href = "landing-page.html";
-});*/
 
 function activeMenu(){
   var len = sections.length;
